@@ -1,1 +1,19 @@
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDGJRs3k9_sS5-YYeWqXcRKa0JUwVVcJ4&callback=initMap"></script>
+<!DOCTYPE html>
+<html>
+<head>
+<title>PoC - TheFork Google Maps Key Abuse</title>
+<script>
+function initMap() {
+  new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 20.5937, lng: 78.9629 },
+    zoom: 6
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDGJRs3k9_sS5-YYeWqXcRKa0JUwVVcJ&libraries=places&callback=initMap" async defer></script>
+</head>
+<body>
+<h3>PoC - Unrestricted Google Maps API Key</h3>
+<div id="map" style="width:100%;height:450px;"></div>
+</body>
+</html>
